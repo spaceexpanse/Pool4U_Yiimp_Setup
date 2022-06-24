@@ -9,7 +9,7 @@
 # Clone the Yiimp repository if it doesn't exist.
 if [ ! -d $HOME/yiimpserver/yiimp_single ]; then
 	echo Downloading Pool4U Yiimp Single Server Installer v1.0. . .
-	git clone https://github.com/spaceexpanse/Pool4U_Yiimp_Single_Installer "$HOME"/yiimpserver/yiimp_single < /dev/null 2> /dev/null
+	git clone -b spex https://github.com/spaceexpanse/Pool4U_Yiimp_Single_Installer "$HOME"/yiimpserver/yiimp_single < /dev/null 2> /dev/null
 	echo
 fi
 
