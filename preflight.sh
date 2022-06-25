@@ -12,11 +12,11 @@ else [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/16\.04\.[0-9]/16.04/' `" != 
 fi
 
 TOTAL_PHYSICAL_MEM=$(head -n 1 /proc/meminfo | awk '{print $2}')
-if [ $TOTAL_PHYSICAL_MEM -lt 990000 ]; then
+if [ $TOTAL_PHYSICAL_MEM -lt 900000 ]; then
   if [ ! -d /vagrant ]; then
     TOTAL_PHYSICAL_MEM=$(expr \( \( $TOTAL_PHYSICAL_MEM \* 1024 \) / 1000 \) / 1000)
     echo "Your Yiimp Server needs more memory (RAM) to function properly."
-    echo "Please provision a machine with at least 0.9 GB, 6 GB recommended."
+    echo "Please provision a machine with at least 0.99 GB, 6 GB recommended."
     echo "This machine has $TOTAL_PHYSICAL_MEM MB memory."
     exit
   fi
