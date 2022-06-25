@@ -98,7 +98,7 @@ clear
 	echo
 	echo "-----------------------------------------------"
 	echo
-	echo Thank you for using the Pool4U Yiimp Server Installer!
+	echo Thank you for using the Yiimp Server Installer!
 	echo
 	echo To run this installer anytime simply type, yiimpserver!
 	echo
