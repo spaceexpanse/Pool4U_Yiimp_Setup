@@ -12,7 +12,7 @@ else [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/16\.04\.[0-9]/16.04/' `" != 
 fi
 
 TOTAL_PHYSICAL_MEM=$(head -n 1 /proc/meminfo | awk '{print $2}')
-if [ $TOTAL_PHYSICAL_MEM -lt 990000 ]; then
+if [ $TOTAL_PHYSICAL_MEM -lt 1022976 ]; then
   if [ ! -d /vagrant ]; then
     TOTAL_PHYSICAL_MEM=$(expr \( \( $TOTAL_PHYSICAL_MEM \* 1024 \) / 1000 \) / 1000)
     echo "Your Yiimp Server needs more memory (RAM) to function properly."
@@ -22,7 +22,7 @@ if [ $TOTAL_PHYSICAL_MEM -lt 990000 ]; then
   fi
 fi
 
-if [ $TOTAL_PHYSICAL_MEM -lt 1024000 ]; then
+if [ $TOTAL_PHYSICAL_MEM -lt 1022976 ]; then
   echo "WARNING: Your Crypto-Pool Server has less than 1 GB of memory."
   echo " It might run unreliably when under heavy load."
 fi
@@ -40,7 +40,7 @@ if
   [ -z "$SWAP_IN_FSTAB" ] &&
   [ ! -e /swapfile ] &&
   [ -z "$ROOT_IS_BTRFS" ] &&
-  [ $TOTAL_PHYSICAL_MEM -lt 1024000 ] &&
+  [ $TOTAL_PHYSICAL_MEM -lt 1022976 ] &&
   [ $AVAILABLE_DISK_SPACE -gt 5242880 ]
 then
   echo "Adding a swap file to the system..."
