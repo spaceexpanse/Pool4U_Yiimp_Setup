@@ -16,14 +16,14 @@ if [ $TOTAL_PHYSICAL_MEM -lt 1024000 ]; then
   if [ ! -d /vagrant ]; then
     TOTAL_PHYSICAL_MEM=$(expr \( \( $TOTAL_PHYSICAL_MEM \* 1024 \) / 1000 \) / 1000)
     echo "Your Yiimp Server needs more memory (RAM) to function properly."
-    echo "Please provision a machine with at least 1536 GB, 6 GB recommended."
+    echo "Please provision a machine with at least 1 GB, 6 GB recommended."
     echo "This machine has $TOTAL_PHYSICAL_MEM MB memory."
     exit
   fi
 fi
 
-if [ $TOTAL_PHYSICAL_MEM -lt 1436000 ]; then
-  echo "WARNING: Your Crypto-Pool Server has less than 1.5 GB of memory."
+if [ $TOTAL_PHYSICAL_MEM -lt 1024000 ]; then
+  echo "WARNING: Your Crypto-Pool Server has less than 1 GB of memory."
   echo " It might run unreliably when under heavy load."
 fi
 
