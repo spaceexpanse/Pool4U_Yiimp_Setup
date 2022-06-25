@@ -25,6 +25,7 @@ fi
 if [ $TOTAL_PHYSICAL_MEM -lt 1022976 ]; then
   echo "WARNING: Your Crypto-Pool Server has less than 1 GB of memory."
   echo " It might run unreliably when under heavy load."
+  exit
 fi
 
 # Check swap
