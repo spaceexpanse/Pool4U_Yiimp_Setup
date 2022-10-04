@@ -65,7 +65,6 @@ sudo timedatectl set-ntp yes
 sudo timedatectl set-timezone Europe/Skopje
 sudo mkdir /home/yiimp-data
 sudo mkdir /home/yiimp-data/wallets
-sudo mkdir /home/yiimp-data/N
 sudo chown -R pool:pool /home/yiimp-data/
 sudo apt install software-properties-common -y
 sudo apt install python-certbot-nginx -y
@@ -73,7 +72,7 @@ sudo add-apt-repository ppa:certbot/certbot -y
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo add-apt-repository ppa:ondrej/php -y
 sudo add-apt-repository ppa:wireguard/wireguard -y
-sudo apt install git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 wget bc -y
+sudo apt install dialog git build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils python3 wget bc -y
 sudo apt install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libboost-all-dev -y
 sudo apt install libdb4.8-dev libdb4.8++-dev libcurl4-gnutls-dev mcrypt imagemagick libruby memcached fail2ban libdb5.1 libdb5.1++ -y
 sudo apt install libdb5.3 libdb5.3++ libdb5.3++-dev libminiupnpc-dev libzmq3-dev libgmp-dev libqrencode-dev libboost-program-options1.65.1 -y
@@ -84,11 +83,10 @@ sudo apt install php7.3-xsl php-memcache php-imagick php-gettext php7.3-zip php7
 sudo apt install ntpdate curl git zip vim coreutils pollinate unattended-upgrades cron pwgen libgmp3-dev libmysqlclient-dev rsyslog -y
 sudo apt install libkrb5-dev libldap2-dev libidn11-dev librtmp-dev libpsl-dev libnghttp2-dev cmake gnupg2 acl update-notifier-common -y
 sudo apt install nginx ca-certificates certbot lsb-release libsodium-dev libssh2-1 libssh2-1-dev landscape-common ufw purge -y
-sudo apt install php7.3-memcache cifs-utils traceroute software-properties-common dialog dist-upgrade -y
+sudo apt install php7.3-memcache cifs-utils traceroute software-properties-common dist-upgrade wireguard wireguard-dkms wireguard-tools -y
 sudo apt install libboost-program-options-dev qtbase5-dev bison libexpat1-dev libdbus-1-dev libfontconfig-dev libfreetype6-dev -y
 sudo apt install libice-dev libsm-dev libx11-dev libxau-dev libxext-dev libxcb1-dev libxkbcommon-dev xcb-proto x11proto-xext-dev -y
-sudo apt install x11proto-dev xtrans-dev zlib1g-dev libczmq-dev autoconf apt-transport-https -y
-sudo apt install wireguard wireguard-dkms wireguard-tools figlet apache2 apache2-* -y
+sudo apt install x11proto-dev xtrans-dev zlib1g-dev libczmq-dev autoconf apt-transport-https figlet apache2 apache2-* -y
 sudo apt update -y
 sudo apt upgrade -y
 sudo update-alternatives --config php || exit 1
