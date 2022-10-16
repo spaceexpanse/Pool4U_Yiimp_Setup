@@ -76,7 +76,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
   sudo apt install screen cifs-utils traceroute software-properties-common dist-upgrade wireguard wireguard-dkms wireguard-tools -y
   sudo apt install rar unzip libboost-program-options-dev qtbase5-dev bison libexpat1-dev libdbus-1-dev libfontconfig-dev libfreetype6-dev -y
   sudo apt install libice-dev libsm-dev libx11-dev libxau-dev libxext-dev libxcb1-dev libxkbcommon-dev xcb-proto x11proto-xext-dev -y
-  sudo apt install x11proto-dev xtrans-dev zlib1g-dev libczmq-dev autoconf apt-transport-https figlet apache2 apache2-* -y
+  sudo apt install x11proto-dev xtrans-dev zlib1g-dev libczmq-dev autoconf apt-transport-https figlet -y
   echo -e "$GREEN Done...$COL_RESET"
   echo -e "$GREEN  Installing updates/upgades for packages...$COL_RESET"
   sudo apt update -y
