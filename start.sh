@@ -35,15 +35,15 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     export LC_TYPE=en_US.UTF-8
     export NCURSES_NO_UTF8_ACS=1
 
-    source os.txt
-
     if [ -f os.txt ]; then
         rm os.txt
     fi
 
     cat /etc/os-release >> os.txt
     clear
-  
+
+    source os.txt
+
     if [ "$VERSION_ID" != "18.04" ]; then
         clear
         echo -e "$RED Sorry! This package can only be installed on version 18.04....$COL_RESET"
