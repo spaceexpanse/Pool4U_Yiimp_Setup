@@ -46,16 +46,17 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
 
     if [ "$VERSION_ID" != "18.04" ]; then
         clear
-        echo -e "$RED Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
-        echo -e "$GREEN Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
+        echo -e "$YELLOW Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
         echo -e "$BLUE Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
+        echo -e "$RED Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
         exit
     fi
 
+    source settings.conf
     echo -e "$MAGENTA Creating recuired folders...$COL_RESET"
-    sudo mkdir /home/yiimp-data
-    sudo mkdir /home/yiimp-data/wallets
-    sudo chown -R pool:pool /home/yiimp-data/
+    sudo mkdir $instal_folder
+    sudo mkdir $instal_folder/wallets
+    sudo chown -R pool:pool $instal_folder/
     echo -e "$GREEN Done...$COL_RESET"
     
     echo -e "$MAGENTA Setting NTP to Europe/Skopje...$COL_RESET"
