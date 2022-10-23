@@ -57,16 +57,14 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     sudo timedatectl set-ntp yes
     sudo timedatectl set-timezone Europe/Skopje
     echo -e "$GREEN Done...$COL_RESET"
-
-<<<<<<< HEAD
-  #check for user
-  echo -e " Installing needed packages for setup to continue...$COL_RESET"
-  sudo apt-get -q -q update
+    
+    #check for user
+    echo -e " Installing needed packages for setup to continue...$COL_RESET"
+    #sudo apt-get -q -q update
   
-  apt_get_quiet install dialog python3 python3-pip acl nano rar apt-transport-https || exit 1
-=======
+    #apt_get_quiet install dialog python3 python3-pip acl nano rar apt-transport-https || exit 1
+
     echo -e "$MAGENTA Start installation of all required packages...$COL_RESET"
->>>>>>> 91e0ae41bce814e51821cd6ffeeb3f0e420b0577
 
     echo -e "$MAGENTA Installing MariaDB Repository...$COL_RESET"
     hide_output sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
