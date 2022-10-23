@@ -41,7 +41,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     export NCURSES_NO_UTF8_ACS=1
 
     #check for user
-    echo -e "$GREEN Installing needed packages for setup to continue...$COL_RESET"
+    echo -e "$MAGENTA Installing needed packages for setup to continue...$COL_RESET"
 
     echo -e "$MAGENTA Creating recuired folders...$COL_RESET"
     sudo mkdir /home/yiimp-data
