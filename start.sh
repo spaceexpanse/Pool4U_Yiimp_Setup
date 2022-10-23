@@ -6,6 +6,31 @@
 # This script is intended to be ran from the Yiimp Server Installer            #
 ################################################################################
 
+source settings.conf
+
+
+
+    echo $default_username default_username
+    echo $wireguard_ip wireguard_ip
+    echo $wireguard_port wireguard_port
+    echo $sql_ip sql_ip
+    echo $sql_name sql_name
+    echo $sql_root_user sql_root_user
+    echo $sql_root_user_pass sql_root_user_pass
+    echo $sql_www_user sql_www_user
+    echo $sql_www_user_pass sql_www_user_pass
+    echo $sql_stratum_user sql_stratum_user
+    echo $sql_stratum_user_pass sql_stratum_user_pass
+    echo $dns_url dns_url
+    echo $dns_stratum dns_stratum
+    echo $admin_email admin_email
+    echo $btc_address btc_address
+    echo $instal_folder instal_folder
+    nano settings.conf
+    exit
+
+
+
 if [ -f /etc/yiimpserver.conf ]; then
     cat /etc/yiimpserver.conf | sed s/^/DEFAULT_/ > /tmp/yiimpserver.prev.conf
     source /tmp/yiimpserver.prev.conf
