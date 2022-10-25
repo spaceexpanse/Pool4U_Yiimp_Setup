@@ -18,7 +18,7 @@ else
 fi
 
 if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
-    clear
+    #clear
     cd $HOME/yiimpserver/install
 
     source functions.sh
@@ -269,7 +269,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
 
 else
 
-    clear
+    #clear
 
     # Ensure Python reads/writes files in UTF-8. If the machine
     # triggers some other locale in Python, like ASCII encoding,

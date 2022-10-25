@@ -19,13 +19,15 @@ fi
 
 if [ $RESULT = 1 ]
 then
-clear;
+#clear
+;
 cd $HOME/yiimpserver/install
 source bootstrap_single.sh;
 fi
 
 if [ $RESULT = 2 ]
 then
-clear;
+#clear
+;
 exit;
 fi

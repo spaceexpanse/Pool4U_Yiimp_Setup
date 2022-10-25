@@ -8,7 +8,7 @@
 
 source /etc/functions.sh
 cd ~/yiimpserver/install
-clear
+##clear
 
 # Welcome
 message_box "Pool4U Yiimp Server Installer v1.0" \
@@ -34,7 +34,7 @@ esac
 
 # If Using SSH Key Login
 if [[ ("$UsingSSH" == "yes") ]]; then
-  clear
+  ##clear
     if [ -z "${yiimpadmin:-}" ]; then
       DEFAULT_yiimpadmin=yiimpadmin
       input_box "New Account Name" \
@@ -65,7 +65,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
 
   # create random user password
   RootPassword=$(openssl rand -base64 8 | tr -d "=+/")
-  clear
+  #clear
 
   # Add user
   echo -e "Adding new user and setting SSH key...$COL_RESET"
@@ -118,7 +118,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
   cd ~
   sudo setfacl -m u:${yiimpadmin}:rwx /home/${yiimpadmin}/yiimpserver
   sudo rm -r $HOME/yiimpserver
-  clear
+  #clear
   echo "New User is installed make sure you saved your private key..."
   echo -e "$RED Please reboot system and log in as the new user and type$COL_RESET $GREEN yiimpserver$COL_RESET $RED to continue setup...$COL_RESET"
   exit 0
@@ -154,7 +154,7 @@ if [ -z "${RootPassword:-}" ]; then
   fi
 fi
 
-clear
+#clear
 
 dialog --title "Verify Your Responses" \
 --yesno "Please verify your answers before you continue:
@@ -170,7 +170,7 @@ response=$?
 case $response in
 
 0)
-clear
+#clear
 echo -e " Adding new user and password...$COL_RESET"
 
 sudo adduser ${yiimpadmin} --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
@@ -214,14 +214,14 @@ sudo cp -r ~/yiimpserver /home/${yiimpadmin}/
 cd ~
 sudo setfacl -m u:${yiimpadmin}:rwx /home/${yiimpadmin}/yiimpserver
 sudo rm -r $HOME/yiimpserver
-clear
+#clear
 echo "New User is installed..."
 echo -e "$RED Please reboot system and log in as the new user and type$COL_RESET $GREEN yiimpserver$COL_RESET $RED to continue setup...$COL_RESET"
 exit 0;;
 
 1)
 
-clear
+#clear
 bash $(basename $0) && exit;;
 
 255)

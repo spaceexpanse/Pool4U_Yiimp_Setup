@@ -5,7 +5,7 @@
 ################################################################################
 
 source /etc/functions.sh
-clear
+#clear
 echo -e " Setting our global variables..."
 
 # If the machine is behind a NAT, inside a VM, etc., it may not know

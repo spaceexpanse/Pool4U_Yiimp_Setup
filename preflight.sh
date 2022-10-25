@@ -9,12 +9,12 @@ if [ -f os.txt ]; then
 fi
 
 cat /etc/os-release >> os.txt
-clear
+#clear
 
 source os.txt
 
 if [ "$VERSION_ID" != "18.04" ]; then
-    clear
+    #clear
     echo -e "$YELLOW Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
     echo -e "$BLUE Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
     echo -e "$RED Sorry! This package can only be installed on version Ubuntu 18.04 LTS...$COL_RESET"
