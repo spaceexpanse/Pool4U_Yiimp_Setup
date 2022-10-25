@@ -242,6 +242,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
         zlib1g-dev \
         autoconf \
         apt-transport-https \
+        libgmp3-dev \
         figlet \
         -y
     echo -e "$GREEN Done...$COL_RESET"
