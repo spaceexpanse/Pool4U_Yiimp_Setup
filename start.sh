@@ -43,11 +43,11 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     #check for user
     echo -e "$MAGENTA Installing needed packages for setup to continue...$COL_RESET"
 
-    echo -e "$MAGENTA Creating recuired folders...$COL_RESET"
-    sudo mkdir /home/yiimp-data
-    sudo mkdir /home/yiimp-data/wallets
-    sudo chown -R pool:pool /home/yiimp-data/
-    echo -e "$GREEN Done...$COL_RESET"
+    #echo -e "$MAGENTA Creating recuired folders...$COL_RESET"
+    #sudo mkdir /home/yiimp-data
+    #sudo mkdir /home/yiimp-data/wallets
+    #sudo chown -R pool:pool /home/yiimp-data/
+    #echo -e "$GREEN Done...$COL_RESET"
     
     echo -e "$MAGENTA Setting NTP to Europe/Skopje...$COL_RESET"
     sudo apt install \
