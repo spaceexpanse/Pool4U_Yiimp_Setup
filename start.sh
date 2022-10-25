@@ -50,10 +50,8 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     #echo -e "$GREEN Done...$COL_RESET"
     
     echo -e "$MAGENTA Setting NTP to Europe/Skopje...$COL_RESET"
-    sudo apt install \
-        ntp \
-        ntpdate \
-        -y
+    sudo apt-get install ntp -y
+    sudo apt-get install ntpdate -y
     sudo timedatectl set-ntp yes
     sudo timedatectl set-timezone Europe/Skopje
     echo -e "$GREEN Done...$COL_RESET"
@@ -72,16 +70,14 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Install software-properties-common...$COL_RESET"
-    sudo apt install software-properties-common -y
+    sudo apt-get install software-properties-common -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Install certbot...$COL_RESET"
     sudo add-apt-repository ppa:certbot/certbot -y
-    sudo apt install \
-        python-certbot-nginx \
-        ca-certificates \
-        certbot \
-        -y
+    sudo apt-get install python-certbot-nginx -y
+    sudo apt-get install ca-certificates -y
+    sudo apt-get install certbot -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Installing ppa:bitcoin/bitcoin...$COL_RESET"
@@ -94,157 +90,148 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
 
     echo -e "$MAGENTA Installing ppa:wireguard/wireguard...$COL_RESET"
     sudo add-apt-repository ppa:wireguard/wireguard -y
-    sudo apt install \
-        wireguard \
-        wireguard-dkms \
-        wireguard-tools \
-        -y
+    sudo apt install wireguard -y
+    sudo apt install wireguard-dkms -y
+    sudo apt install wireguard-tools -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Installing lib*...$COL_RESET"
-    sudo apt install \
-        libtool \
-        libssl-dev \
-        libevent-dev \
-        libboost-system-dev \
-        libboost-filesystem-dev \
-        libboost-chrono-dev \
-        libboost-test-dev \
-        libboost-thread-dev \
-        libboost-all-dev \
-        libdb4.8-dev \
-        libdb4.8++-dev \
-        libcurl4-gnutls-dev \
-        libruby \
-        libdb5.1 \
-        libdb5.1++ \
-        libdb5.3 \
-        libdb5.3++ \
-        libdb5.3++-dev \
-        libminiupnpc-dev \
-        libzmq3-dev \
-        libgmp-dev \
-        libqrencode-dev \
-        libboost-program-options1.65.1 \
-        libqt5gui5 \
-        libqt5core5a \
-        libqt5dbus5 \
-        libprotobuf-dev \
-        libgmp3-dev \
-        libmysqlclient-dev \
-        libkrb5-dev \
-        libldap2-dev \
-        libidn11-dev \
-        librtmp-dev \
-        libpsl-dev \
-        libnghttp2-dev \
-        libsodium-dev \
-        libssh2-1 \
-        libssh2-1-dev \
-        libboost-program-options-dev \
-        libexpat1-dev \
-        libdbus-1-dev \
-        libfontconfig-dev \
-        libfreetype6-dev \
-        libice-dev \
-        libsm-dev \
-        libx11-dev \
-        libxau-dev \
-        libxext-dev \
-        libxcb1-dev \
-        libxkbcommon-dev \
-        libczmq-dev \
-        -y
+    sudo apt-get install libtool -y
+    sudo apt-get install libssl-dev -y
+    sudo apt-get install libevent-dev -y
+    sudo apt-get install libboost-system-dev -y
+    sudo apt-get install libboost-filesystem-dev -y
+    sudo apt-get install libboost-chrono-dev -y
+    sudo apt-get install libboost-test-dev -y
+    sudo apt-get install libboost-thread-dev -y
+    sudo apt-get install libboost-all-dev -y
+    sudo apt-get install libdb4.8-dev -y
+    sudo apt-get install libdb4.8++-dev -y
+    sudo apt-get install libcurl4-gnutls-dev -y
+    sudo apt-get install libruby -y
+    sudo apt-get install libdb5.1 -y
+    sudo apt-get install libdb5.1++ -y
+    sudo apt-get install libdb5.3 -y
+    sudo apt-get install libdb5.3++ -y
+    sudo apt-get install libdb5.3++-dev -y
+    sudo apt-get install libminiupnpc-dev -y
+    sudo apt-get install libzmq3-dev -y
+    sudo apt-get install libgmp-dev -y
+    sudo apt-get install libqrencode-dev -y
+    sudo apt-get install libboost-program-options1.65.1 -y
+    sudo apt-get install libqt5gui5 -y
+    sudo apt-get install libqt5core5a -y
+    sudo apt-get install libqt5dbus5 -y
+    sudo apt-get install libprotobuf-dev -y
+    sudo apt-get install libgmp3-dev -y
+    sudo apt-get install libmysqlclient-dev -y
+    sudo apt-get install libkrb5-dev -y
+    sudo apt-get install libldap2-dev -y
+    sudo apt-get install libidn11-dev -y
+    sudo apt-get install librtmp-dev -y
+    sudo apt-get install libpsl-dev -y
+    sudo apt-get install libnghttp2-dev -y
+    sudo apt-get install libsodium-dev -y
+    sudo apt-get install libssh2-1 -y
+    sudo apt-get install libssh2-1-dev -y
+    sudo apt-get install libboost-program-options-dev -y
+    sudo apt-get install libexpat1-dev -y
+    sudo apt-get install libdbus-1-dev -y
+    sudo apt-get install libfontconfig-dev -y
+    sudo apt-get install libfreetype6-dev -y
+    sudo apt-get install libice-dev -y
+    sudo apt-get install libsm-dev -y
+    sudo apt-get install libx11-dev -y
+    sudo apt-get install libxau-dev -y
+    sudo apt-get install libxext-dev -y
+    sudo apt-get install libxcb1-dev -y
+    sudo apt-get install libxkbcommon-dev -y
+    sudo apt-get install libczmq-dev -y
+    sudo apt-get install libiniparser-dev -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Installing php*...$COL_RESET"
-    sudo apt install \
-        php7.3 \
-        php7.3-fpm \
-        php7.3-opcache \
-        php7.3-common \
-        php7.3-gd \
-        php7.3-mysql \
-        php7.3-imap \
-        php7.3-cli \
-        php7.3-cgi \
-        php7.3-curl \
-        php7.3-intl \
-        php7.3-pspell \
-        php7.3-recode \
-        php7.3-sqlite3 \
-        php7.3-tidy \
-        php7.3-xmlrpc \
-        php7.3-xsl \
-        php7.3-zip \
-        php7.3-mbstring \
-        php7.3-memcache \
-        php-pear \
-        php-auth-sasl \
-        php-memcache \
-        php-imagick \
-        php-gettext \
-        -y
+    sudo apt-get install php7.3 -y
+    sudo apt-get install php7.3-fpm -y
+    sudo apt-get install php7.3-opcache -y
+    sudo apt-get install php7.3-common -y
+    sudo apt-get install php7.3-gd -y
+    sudo apt-get install php7.3-mysql -y
+    sudo apt-get install php7.3-imap -y
+    sudo apt-get install php7.3-cli -y
+    sudo apt-get install php7.3-cgi -y
+    sudo apt-get install php7.3-curl -y
+    sudo apt-get install php7.3-intl -y
+    sudo apt-get install php7.3-pspell -y
+    sudo apt-get install php7.3-recode -y
+    sudo apt-get install php7.3-sqlite3 -y
+    sudo apt-get install php7.3-tidy -y
+    sudo apt-get install php7.3-xmlrpc -y
+    sudo apt-get install php7.3-xsl -y
+    sudo apt-get install php7.3-zip -y
+    sudo apt-get install php7.3-mbstring -y
+    sudo apt-get install php7.3-memcache -y
+    sudo apt-get install php-pear -y
+    sudo apt-get install php-auth-sasl -y
+    sudo apt-get install php-memcache -y
+    sudo apt-get install php-imagick -y
+    sudo apt-get install php-gettext -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA Installing other packages*...$COL_RESET"
-    sudo apt install \
-        build-essential \
-        autotools-dev \
-        automake \
-        pkg-config \
-        bsdmainutils \
-        python3 \
-        wget \
-        bc \
-        mcrypt \
-        imagemagick \
-        memcached \
-        curl \
-        zip \
-        unzip \
-        rar \
-        vim \
-        ufw \
-        fail2ban \
-        qttools5-dev \
-        qttools5-dev-tools \
-        qtbase5-dev \
-        protobuf-compiler \
-        update-motd \
-        haveged \
-        python3-dev \
-        python3-pip \
-        coreutils \
-        pollinate \
-        unattended-upgrades \
-        cron \
-        pwgen \
-        rsyslog \
-        cmake \
-        gnupg2 \
-        acl \
-        update-notifier-common \
-        nginx \
-        lsb-release \
-        landscape-common \
-        purge \
-        screen \
-        cifs-utils \
-        traceroute \
-        software-properties-common \
-        dist-upgrade \
-        bison \
-        xcb-proto \
-        x11proto-xext-dev \
-        x11proto-dev \
-        xtrans-dev \
-        zlib1g-dev \
-        autoconf \
-        apt-transport-https \
-        libgmp3-dev \
-        figlet \
-        -y
+    sudo apt install build-essential -y
+    sudo apt install autotools-dev -y
+    sudo apt install automake -y
+    sudo apt install pkg-config -y
+    sudo apt install bsdmainutils -y
+    sudo apt install python3 -y
+    sudo apt install wget -y
+    sudo apt install bc -y
+    sudo apt install mcrypt -y
+    sudo apt install imagemagick -y
+    sudo apt install memcached -y
+    sudo apt install curl -y
+    sudo apt install zip -y
+    sudo apt install unzip -y
+    sudo apt install rar -y
+    sudo apt install vim -y
+    sudo apt install fail2ban -y
+    sudo apt install ufw -y
+    sudo apt install qttools5-dev -y
+    sudo apt install qttools5-dev-tools -y
+    sudo apt install qtbase5-dev -y
+    sudo apt install protobuf-compiler -y
+    sudo apt install update-motd -y
+    sudo apt install haveged -y
+    sudo apt install python3-dev -y
+    sudo apt install python3-pip -y
+    sudo apt install coreutils -y
+    sudo apt install pollinate -y
+    sudo apt install unattended-upgrades -y
+    sudo apt install cron -y
+    sudo apt install pwgen -y
+    sudo apt install rsyslog -y
+    sudo apt install cmake -y
+    sudo apt install gnupg2 -y
+    sudo apt install acl -y
+    sudo apt install update-notifier-common -y
+    sudo apt install nginx -y
+    sudo apt install lsb-release -y
+    sudo apt install landscape-common -y
+    sudo apt install screen -y
+    sudo apt install cifs-utils -y
+    sudo apt install traceroute -y
+    sudo apt install software-properties-common -y
+    sudo apt install bison -y
+    sudo apt install xcb-proto -y
+    sudo apt install x11proto-xext-dev -y
+    sudo apt install x11proto-dev -y
+    sudo apt install xtrans-dev -y
+    sudo apt install zlib1g-dev -y
+    sudo apt install autoconf -y
+    sudo apt install dh-autoreconf -y
+    sudo apt install apt-transport-https -y
+    sudo apt install figlet -y
     echo -e "$GREEN Done...$COL_RESET"
 
     echo -e "$MAGENTA  Installing updates/upgades for packages...$COL_RESET"
@@ -291,7 +278,9 @@ else
         source /etc/yiimpserver.conf
         # Start yiimpserver
         cd $HOME/yiimpserver/install
-        source menu.sh
+        #source menu.sh
+        RESULT=1
+        source bootstrap_single.sh
         echo
         echo "-----------------------------------------------"
         echo
