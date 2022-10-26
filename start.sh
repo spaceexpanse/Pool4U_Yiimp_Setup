@@ -22,7 +22,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     cd $HOME/yiimpserver/install
     source functions.sh
 
-    echo -e "$MAGENTA Installing needed packages for setup to continue...$COL_RESET"
+    echo -e "$CYAN Installing needed packages for setup to continue...$COL_RESET"
     source install_packages.sh
     echo -e "$GREEN Done...$COL_RESET"
 
@@ -52,7 +52,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     #sudo chown -R pool:pool /home/yiimp-data/
     #echo -e "$GREEN Done...$COL_RESET"
     
-    echo -e "$MAGENTA Setting NTP to Europe/Skopje...$COL_RESET"
+    echo -e "$CYAN Setting NTP to Europe/Skopje...$COL_RESET"
     hide_output sudo timedatectl set-ntp yes
     hide_output sudo timedatectl set-timezone Europe/Skopje
     echo -e "$GREEN Done...$COL_RESET"
@@ -80,7 +80,7 @@ else
         cd $HOME/yiimpserver/install
         RESULT=1
 
-        echo -e "$MAGENTA Downloading Pool4U Yiimp Single Server Installer v1.0...$COL_RESET"
+        echo -e "$CYAN Downloading Pool4U Yiimp Single Server Installer v1.0...$COL_RESET"
 	    git clone https://github.com/mivanoski/Pool4U_Yiimp_Single_Installer "$HOME"/yiimpserver/yiimp_single < /dev/null 2> /dev/null
         echo -e "$GREEN Done...$COL_RESET"
 
