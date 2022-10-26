@@ -190,6 +190,7 @@ echo -e "$CYAN Installing php*...$COL_RESET"
 echo -e "$GREEN Done. Installing php*...$COL_RESET"
 
 echo -e "$CYAN Installing updates/upgades for packages...$COL_RESET"
+    sudo apt-get purge apache2 apache2-* -y
     sudo apt update -y
     sudo apt upgrade -y
 echo -e "$GREEN Done. Installing updates/upgades for packages...$COL_RESET"
