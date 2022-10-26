@@ -12,36 +12,36 @@ echo -e "$CYAN Removing Apache and installing NGINX...$COL_RESET"
     sudo apt-get purge apache2-* -y
     sudo apt-get --purge autoremove -y
     sudo apt-get install nginx -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Removing Apache and installing NGINX...$COL_RESET"
 
 echo -e "$CYAN Installing MariaDB Repository...$COL_RESET"
     sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
     sudo add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://mirror.one.com/mariadb/repo/10.4/ubuntu bionic main' >/dev/null 2>&1
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Installing MariaDB Repository...$COL_RESET"
 
 echo -e "$CYAN Install software-properties-common...$COL_RESET"
     sudo apt-get install software-properties-common -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Install software-properties-common...$COL_RESET"
 
 echo -e "$CYAN Install certbot...$COL_RESET"
     sudo add-apt-repository ppa:certbot/certbot -y
     sudo apt-get install python-certbot-nginx -y
     sudo apt-get install ca-certificates -y
     sudo apt-get install certbot -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Install certbot...$COL_RESET"
 
 echo -e "$CYAN Installing ppa:bitcoin/bitcoin...$COL_RESET"
     sudo add-apt-repository ppa:bitcoin/bitcoin -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Installing ppa:bitcoin/bitcoin...$COL_RESET"
 
 echo -e "$CYAN Installing ppa:ondrej/php...$COL_RESET"
     sudo add-apt-repository ppa:ondrej/php -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Installing ppa:ondrej/php...$COL_RESET"
 
 echo -e "$CYAN Installing wireguard...$COL_RESET"
     sudo apt-get install wireguard -y
     sudo apt-get install wireguard-dkms -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Installing wireguard...$COL_RESET"
 
 echo -e "$CYAN Installing packages*...$COL_RESET"
     sudo apt-get install git -y
@@ -192,4 +192,4 @@ echo -e "$GREEN Done. Installing php*...$COL_RESET"
 echo -e "$CYAN Installing updates/upgades for packages...$COL_RESET"
     sudo apt update -y
     sudo apt upgrade -y
-echo -e "$GREEN Done...$COL_RESET"
+echo -e "$GREEN Done. Installing updates/upgades for packages...$COL_RESET"
