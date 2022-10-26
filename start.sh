@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+sudo apt install git -y
+sudo apt install landscape-common -y
+sudo apt install nano -y
+sudo apt install dialog -y
+sudo apt update -y
+sudo apt upgrade -y
+
 ################################################################################
 # Source https://mailinabox.email/ https://github.com/mail-in-a-box/mailinabox #
 # Updated by Pool4U for YiiMP use...                                           #
