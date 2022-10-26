@@ -34,12 +34,12 @@ function hide_output {
 		$@ &> $OUTPUT & spinner
 		E=$?
 		if [ $E != 0 ]; then
-		echo
-		echo FAILED: $@
-		echo -----------------------------------------
-		cat $OUTPUT
-		echo -----------------------------------------
-		exit $E
+		    echo
+		    echo FAILED: $@
+		    echo -----------------------------------------
+		    cat $OUTPUT
+		    echo -----------------------------------------
+		    exit $E
 		fi
 
 		rm -f $OUTPUT

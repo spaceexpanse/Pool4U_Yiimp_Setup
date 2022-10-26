@@ -1,17 +1,6 @@
 #!/usr/bin/env bash
 
-ESC_SEQ="\x1b["
-COL_RESET=$ESC_SEQ"39;49;00m"
-RED=$ESC_SEQ"31;01m"
-GREEN=$ESC_SEQ"32;01m"
-YELLOW=$ESC_SEQ"33;01m"
-BLUE=$ESC_SEQ"34;01m"
-MAGENTA=$ESC_SEQ"35;01m"
-CYAN=$ESC_SEQ"36;01m"
 
-echo -e "$CYAN Installing needed packages for setup to continue...$COL_RESET"
-    source install_packages.sh
-echo -e "$GREEN Done...$COL_RESET"
 
 ################################################################################
 # Source https://mailinabox.email/ https://github.com/mail-in-a-box/mailinabox #
@@ -44,7 +33,7 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
 
     if ! locale -a | grep en_US.utf8 > /dev/null; then
         # Generate locale if not exists
-        hide_output locale-gen en_US.UTF-8
+        locale-gen en_US.UTF-8
     fi
 
     export LANGUAGE=en_US.UTF-8
@@ -56,8 +45,8 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     #check for user
     
     echo -e "$CYAN Setting NTP to Europe/Skopje...$COL_RESET"
-    hide_output sudo timedatectl set-ntp yes
-    hide_output sudo timedatectl set-timezone Europe/Skopje
+    sudo timedatectl set-ntp yes
+    sudo timedatectl set-timezone Europe/Skopje
     echo -e "$GREEN Done...$COL_RESET"
         
     # Are we running as root?

@@ -8,10 +8,10 @@ MAGENTA=$ESC_SEQ"35;01m"
 CYAN=$ESC_SEQ"36;01m"
 
 echo -e "$CYAN Removing Apache and installing NGINX...$COL_RESET"
-    sudo apt-get purge apache2 -y -q
-    sudo apt-get purge apache2-* -y -q
-    sudo apt-get --purge autoremove -y -q
-    sudo apt-get install nginx -y -q
+    sudo apt-get purge apache2 -y
+    sudo apt-get purge apache2-* -y
+    sudo apt-get --purge autoremove -y
+    sudo apt-get install nginx -y
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Installing MariaDB Repository...$COL_RESET"
@@ -20,178 +20,176 @@ echo -e "$CYAN Installing MariaDB Repository...$COL_RESET"
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Install software-properties-common...$COL_RESET"
-    sudo apt-get install software-properties-common -y -q
+    sudo apt-get install software-properties-common -y
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Install certbot...$COL_RESET"
-    sudo add-apt-repository ppa:certbot/certbot -y -q
-    sudo apt-get install python-certbot-nginx -y -q
-    sudo apt-get install ca-certificates -y -q
-    sudo apt-get install certbot -y -q
+    sudo add-apt-repository ppa:certbot/certbot -y
+    sudo apt-get install python-certbot-nginx -y
+    sudo apt-get install ca-certificates -y
+    sudo apt-get install certbot -y
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Installing ppa:bitcoin/bitcoin...$COL_RESET"
-    sudo add-apt-repository ppa:bitcoin/bitcoin -y -q
+    sudo add-apt-repository ppa:bitcoin/bitcoin -y
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Installing ppa:ondrej/php...$COL_RESET"
-    sudo add-apt-repository ppa:ondrej/php -y -q
+    sudo add-apt-repository ppa:ondrej/php -y
 echo -e "$GREEN Done...$COL_RESET"
 
-echo -e "$CYAN Installing ppa:wireguard/wireguard...$COL_RESET"
-    sudo apt-get install wireguard -y -q
-    sudo apt-get install wireguard-dkms -y -q
-    #sudo apt-get install wireguard-tools -y -q
-    #sudo add-apt-repository ppa:wireguard/wireguard -y -q
+echo -e "$CYAN Installing wireguard...$COL_RESET"
+    sudo apt-get install wireguard -y
+    sudo apt-get install wireguard-dkms -y
 echo -e "$GREEN Done...$COL_RESET"
 
 echo -e "$CYAN Installing packages*...$COL_RESET"
-    sudo apt-get install git -y -q
-    sudo apt-get install nano -y -q
-    sudo apt-get install dialog -y -q
-    sudo apt-get install build-essential -y -q
-    sudo apt-get install autotools-dev -y -q
-    sudo apt-get install automake -y -q
-    sudo apt-get install pkg-config -y -q
-    sudo apt-get install bsdmainutils -y -q
-    sudo apt-get install python3 -y -q
-    sudo apt-get install python3-dev -y -q
-    sudo apt-get install python3-pip -y -q
-    #sudo apt-get install wget -y -q
-    #sudo apt-get install bc -y -q
-    sudo apt-get install mcrypt -y -q
-    sudo apt-get install imagemagick -y -q
-    sudo apt-get install memcached -y -q
-    sudo apt-get install curl -y -q
-    sudo apt-get install zip -y -q
-    sudo apt-get install unzip -y -q
-    sudo apt-get install rar -y -q
-    #sudo apt-get install vim -y -q
-    sudo apt-get install fail2ban -y -q
-    sudo apt-get install ufw -y -q
-    sudo apt-get install qttools5-dev -y -q
-    sudo apt-get install qttools5-dev-tools -y -q
-    #sudo apt-get install qtbase5-dev -y -q
-    sudo apt-get install protobuf-compiler -y -q
-    sudo apt-get install update-motd -y -q
-    sudo apt-get install haveged -y -q
-    #sudo apt-get install coreutils -y -q
-    #sudo apt-get install pollinate -y -q
-    #sudo apt-get install unattended-upgrades -y -q
-    #sudo apt-get install cron -y -q
-    sudo apt-get install pwgen -y -q
-    #sudo apt-get install rsyslog -y -q
-    sudo apt-get install cmake -y -q
-    sudo apt-get install gnupg2 -y -q
-    #sudo apt-get install acl -y -q
-    #sudo apt-get install update-notifier-common -y -q
-    #sudo apt-get install lsb-release -y -q
-    #sudo apt-get install landscape-common -y -q
-    #sudo apt-get install screen -y -q
-    sudo apt-get install cifs-utils -y -q
-    sudo apt-get install traceroute -y -q
-    sudo apt-get install bison -y -q
-    sudo apt-get install xcb-proto -y -q
-    #sudo apt-get install x11proto-xext-dev -y -q
-    #sudo apt-get install x11proto-dev -y -q
-    #sudo apt-get install xtrans-dev -y -q
-    sudo apt-get install zlib1g-dev -y -q
-    #sudo apt-get install autoconf -y -q
-    sudo apt-get install dh-autoreconf -y -q
-    sudo apt-get install apt-transport-https -y -q
-    sudo apt-get install gnutls-dev -y -q
-    sudo apt-get install figlet -y -q
-    sudo apt-get install sendmail -y -q
-    sudo apt-get install ntp -y -q
-    sudo apt-get install ntpdate -y -q
-echo -e "$GREEN Done...$COL_RESET"
+    sudo apt-get install git -y
+    sudo apt-get install nano -y
+    sudo apt-get install dialog -y
+    sudo apt-get install build-essential -y
+    sudo apt-get install autotools-dev -y
+    sudo apt-get install automake -y
+    sudo apt-get install pkg-config -y
+    sudo apt-get install bsdmainutils -y
+    sudo apt-get install python3 -y
+    sudo apt-get install python3-dev -y
+    sudo apt-get install python3-pip -y
+    #sudo apt-get install wget -y
+    #sudo apt-get install bc -y
+    sudo apt-get install mcrypt -y
+    sudo apt-get install imagemagick -y
+    sudo apt-get install memcached -y
+    sudo apt-get install curl -y
+    sudo apt-get install zip -y
+    sudo apt-get install unzip -y
+    sudo apt-get install rar -y
+    #sudo apt-get install vim -y
+    sudo apt-get install fail2ban -y
+    sudo apt-get install ufw -y
+    sudo apt-get install qttools5-dev -y
+    sudo apt-get install qttools5-dev-tools -y
+    #sudo apt-get install qtbase5-dev -y
+    sudo apt-get install protobuf-compiler -y
+    sudo apt-get install update-motd -y
+    sudo apt-get install haveged -y
+    #sudo apt-get install coreutils -y
+    #sudo apt-get install pollinate -y
+    #sudo apt-get install unattended-upgrades -y
+    #sudo apt-get install cron -y
+    sudo apt-get install pwgen -y
+    #sudo apt-get install rsyslog -y
+    sudo apt-get install cmake -y
+    sudo apt-get install gnupg2 -y
+    #sudo apt-get install acl -y
+    #sudo apt-get install update-notifier-common -y
+    #sudo apt-get install lsb-release -y
+    #sudo apt-get install landscape-common -y
+    #sudo apt-get install screen -y
+    sudo apt-get install cifs-utils -y
+    sudo apt-get install traceroute -y
+    sudo apt-get install bison -y
+    sudo apt-get install xcb-proto -y
+    #sudo apt-get install x11proto-xext-dev -y
+    #sudo apt-get install x11proto-dev -y
+    #sudo apt-get install xtrans-dev -y
+    sudo apt-get install zlib1g-dev -y
+    #sudo apt-get install autoconf -y
+    sudo apt-get install dh-autoreconf -y
+    sudo apt-get install apt-transport-https -y
+    sudo apt-get install gnutls-dev -y
+    sudo apt-get install figlet -y
+    sudo apt-get install sendmail -y
+    sudo apt-get install ntp -y
+    sudo apt-get install ntpdate -y
+echo -e "$GREEN Done. Installing packages*...$COL_RESET"
 
 echo -e "$CYAN Installing lib*...$COL_RESET"
-    sudo apt-get install libdb4.8-dev -y -q
-    sudo apt-get install libdb4.8++-dev -y -q
-    sudo apt-get install libdb5.1 -y -q
-    sudo apt-get install libdb5.1++ -y -q
-    sudo apt-get install libdb5.3 -y -q
-    sudo apt-get install libdb5.3++ -y -q
-    sudo apt-get install libdb5.3++-dev -y -q
-    sudo apt-get install libtool -y -q
-    sudo apt-get install libssl-dev -y -q
-    sudo apt-get install libevent-dev -y -q
-    sudo apt-get install libboost-system-dev -y -q
-    sudo apt-get install libboost-filesystem-dev -y -q
-    sudo apt-get install libboost-chrono-dev -y -q
-    sudo apt-get install libboost-test-dev -y -q
-    sudo apt-get install libboost-thread-dev -y -q
-    sudo apt-get install libboost-all-dev -y -q
-    sudo apt-get install libcurl4-gnutls-dev -y -q
-    sudo apt-get install libruby -y -q
-    sudo apt-get install libminiupnpc-dev -y -q
-    sudo apt-get install libzmq3-dev -y -q
-    sudo apt-get install libgmp-dev -y -q
-    sudo apt-get install libqrencode-dev -y -q
-    sudo apt-get install libboost-program-options1.65.1 -y -q
-    sudo apt-get install libqt5gui5 -y -q
-    sudo apt-get install libqt5core5a -y -q
-    sudo apt-get install libqt5dbus5 -y -q
-    sudo apt-get install libprotobuf-dev -y -q
-    sudo apt-get install libgmp3-dev -y -q
-    sudo apt-get install libmysqlclient-dev -y -q
-    sudo apt-get install libkrb5-dev -y -q
-    sudo apt-get install libldap2-dev -y -q
-    sudo apt-get install libidn11-dev -y -q
-    sudo apt-get install librtmp-dev -y -q
-    sudo apt-get install libpsl-dev -y -q
-    sudo apt-get install libnghttp2-dev -y -q
-    sudo apt-get install libsodium-dev -y -q
-    sudo apt-get install libssh2-1 -y -q
-    sudo apt-get install libssh2-1-dev -y -q
-    sudo apt-get install libboost-program-options-dev -y -q
-    sudo apt-get install libexpat1-dev -y -q
-    sudo apt-get install libdbus-1-dev -y -q
-    sudo apt-get install libfontconfig-dev -y -q
-    sudo apt-get install libfreetype6-dev -y -q
-    sudo apt-get install libice-dev -y -q
-    sudo apt-get install libsm-dev -y -q
-    sudo apt-get install libx11-dev -y -q
-    sudo apt-get install libxau-dev -y -q
-    sudo apt-get install libxext-dev -y -q
-    sudo apt-get install libxcb1-dev -y -q
-    sudo apt-get install libxkbcommon-dev -y -q
-    sudo apt-get install libczmq-dev -y -q
-    sudo apt-get install libiniparser-dev -y -q
-echo -e "$GREEN Done...$COL_RESET"
+    sudo apt-get install libdb4.8-dev -y
+    sudo apt-get install libdb4.8++-dev -y
+    sudo apt-get install libdb5.1 -y
+    sudo apt-get install libdb5.1++ -y
+    sudo apt-get install libdb5.3 -y
+    sudo apt-get install libdb5.3++ -y
+    sudo apt-get install libdb5.3++-dev -y
+    sudo apt-get install libtool -y
+    sudo apt-get install libssl-dev -y
+    sudo apt-get install libevent-dev -y
+    sudo apt-get install libboost-system-dev -y
+    sudo apt-get install libboost-filesystem-dev -y
+    sudo apt-get install libboost-chrono-dev -y
+    sudo apt-get install libboost-test-dev -y
+    sudo apt-get install libboost-thread-dev -y
+    sudo apt-get install libboost-all-dev -y
+    sudo apt-get install libcurl4-gnutls-dev -y
+    sudo apt-get install libruby -y
+    sudo apt-get install libminiupnpc-dev -y
+    sudo apt-get install libzmq3-dev -y
+    sudo apt-get install libgmp-dev -y
+    sudo apt-get install libqrencode-dev -y
+    sudo apt-get install libboost-program-options1.65.1 -y
+    sudo apt-get install libqt5gui5 -y
+    sudo apt-get install libqt5core5a -y
+    sudo apt-get install libqt5dbus5 -y
+    sudo apt-get install libprotobuf-dev -y
+    sudo apt-get install libgmp3-dev -y
+    sudo apt-get install libmysqlclient-dev -y
+    sudo apt-get install libkrb5-dev -y
+    sudo apt-get install libldap2-dev -y
+    sudo apt-get install libidn11-dev -y
+    sudo apt-get install librtmp-dev -y
+    sudo apt-get install libpsl-dev -y
+    sudo apt-get install libnghttp2-dev -y
+    sudo apt-get install libsodium-dev -y
+    sudo apt-get install libssh2-1 -y
+    sudo apt-get install libssh2-1-dev -y
+    sudo apt-get install libboost-program-options-dev -y
+    sudo apt-get install libexpat1-dev -y
+    sudo apt-get install libdbus-1-dev -y
+    sudo apt-get install libfontconfig-dev -y
+    sudo apt-get install libfreetype6-dev -y
+    sudo apt-get install libice-dev -y
+    sudo apt-get install libsm-dev -y
+    sudo apt-get install libx11-dev -y
+    sudo apt-get install libxau-dev -y
+    sudo apt-get install libxext-dev -y
+    sudo apt-get install libxcb1-dev -y
+    sudo apt-get install libxkbcommon-dev -y
+    sudo apt-get install libczmq-dev -y
+    sudo apt-get install libiniparser-dev -y
+echo -e "$GREEN Done. Installing lib*...$COL_RESET"
 
 echo -e "$CYAN Installing php*...$COL_RESET"
-    sudo apt-get install php7.3 -y -q
-    sudo apt-get install php7.3-fpm -y -q
-    sudo apt-get install php7.3-opcache -y -q
-    sudo apt-get install php7.3-common -y -q
-    sudo apt-get install php7.3-gd -y -q
-    sudo apt-get install php7.3-mysql -y -q
-    sudo apt-get install php7.3-imap -y -q
-    #sudo apt-get install php7.3-cli -y -q
-    sudo apt-get install php7.3-cgi -y -q
-    sudo apt-get install php7.3-curl -y -q
-    sudo apt-get install php7.3-intl -y -q
-    sudo apt-get install php7.3-pspell -y -q
-    sudo apt-get install php7.3-recode -y -q
-    sudo apt-get install php7.3-sqlite3 -y -q
-    sudo apt-get install php7.3-tidy -y -q
-    sudo apt-get install php7.3-xmlrpc -y -q
-    sudo apt-get install php7.3-xsl -y -q
-    sudo apt-get install php7.3-zip -y -q
-    sudo apt-get install php7.3-mbstring -y -q
-    sudo apt-get install php7.3-memcache -y -q
-    sudo apt-get install php7.3-memcached -y -q
-    sudo apt-get install php-pear -y -q
-    sudo apt-get install php-auth-sasl -y -q
-    sudo apt-get install php-memcache -y -q
-    sudo apt-get install php-imagick -y -q
-    sudo apt-get install php-gettext -y -q
-    #sudo apt-get install phpmyadmin -y -q
-echo -e "$GREEN Done...$COL_RESET"
+    sudo apt-get install php7.3 -y
+    sudo apt-get install php7.3-fpm -y
+    sudo apt-get install php7.3-opcache -y
+    sudo apt-get install php7.3-common -y
+    sudo apt-get install php7.3-gd -y
+    sudo apt-get install php7.3-mysql -y
+    sudo apt-get install php7.3-imap -y
+    #sudo apt-get install php7.3-cli -y
+    sudo apt-get install php7.3-cgi -y
+    sudo apt-get install php7.3-curl -y
+    sudo apt-get install php7.3-intl -y
+    sudo apt-get install php7.3-pspell -y
+    sudo apt-get install php7.3-recode -y
+    sudo apt-get install php7.3-sqlite3 -y
+    sudo apt-get install php7.3-tidy -y
+    sudo apt-get install php7.3-xmlrpc -y
+    sudo apt-get install php7.3-xsl -y
+    sudo apt-get install php7.3-zip -y
+    sudo apt-get install php7.3-mbstring -y
+    sudo apt-get install php7.3-memcache -y
+    sudo apt-get install php7.3-memcached -y
+    sudo apt-get install php-pear -y
+    sudo apt-get install php-auth-sasl -y
+    sudo apt-get install php-memcache -y
+    sudo apt-get install php-imagick -y
+    sudo apt-get install php-gettext -y
+    #sudo apt-get install phpmyadmin -y
+echo -e "$GREEN Done. Installing php*...$COL_RESET"
 
 echo -e "$CYAN Installing updates/upgades for packages...$COL_RESET"
-    sudo apt update -y -q
-    sudo apt upgrade -y -q
+    sudo apt update -y
+    sudo apt upgrade -y
 echo -e "$GREEN Done...$COL_RESET"
