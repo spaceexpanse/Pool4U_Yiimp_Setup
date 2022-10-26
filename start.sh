@@ -58,9 +58,11 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
         "Hello and thanks for using the Pool4U Yiimp Setup Installer!
         \n\nInstallation for the most part is fully automated. In most cases any user responses that are needed are asked prior to the installation.
         \n\nNOTE: You should only install this on a brand new Ubuntu 18.04 LTS installation."
+        clear
         source existing_user.sh
         exit
     else
+        clear
         source create_user.sh
         exit
     fi
