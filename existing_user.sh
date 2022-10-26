@@ -12,7 +12,7 @@ cd ~/yiimpserver/install
 
 # Get logged in user name
 whoami=`whoami`
-echo -e " Modifying existing user $whoami for yiimp server setup support."
+echo -e "$CYAN Modifying existing user $whoami for yiimp server setup support."
 sudo usermod -aG sudo ${whoami}
 
 echo '# yiimp
@@ -51,6 +51,6 @@ PRIVATE_IP='"${PRIVATE_IP}"'' | sudo -E tee /etc/yiimpserver.conf >/dev/null 2>&
 cd ~
 sudo setfacl -m u:${whoami}:rwx /home/${whoami}/yiimpserver
 ##clear
-echo -e " Your User has been modified for yiimp server setup support..."
+echo -e "$CYAN Your User has been modified for yiimp server setup support..."
 echo -e "$RED You must reboot the system for the new permissions to update and type$COL_RESET $GREEN yiimpserver$COL_RESET $RED to continue setup...$COL_RESET"
 exit 0

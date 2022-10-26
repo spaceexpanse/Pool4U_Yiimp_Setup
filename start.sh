@@ -45,12 +45,6 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     export NCURSES_NO_UTF8_ACS=1
 
     #check for user
-
-    #echo -e "$MAGENTA Creating recuired folders...$COL_RESET"
-    #sudo mkdir /home/yiimp-data
-    #sudo mkdir /home/yiimp-data/wallets
-    #sudo chown -R pool:pool /home/yiimp-data/
-    #echo -e "$GREEN Done...$COL_RESET"
     
     echo -e "$CYAN Setting NTP to Europe/Skopje...$COL_RESET"
     hide_output sudo timedatectl set-ntp yes

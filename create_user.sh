@@ -68,7 +68,7 @@ if [[ ("$UsingSSH" == "yes") ]]; then
   #clear
 
   # Add user
-  echo -e "Adding new user and setting SSH key...$COL_RESET"
+  echo -e "$CYAN Adding new user and setting SSH key...$COL_RESET"
   sudo adduser ${yiimpadmin} --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
   echo -e "${RootPassword}\n${RootPassword}" | passwd ${yiimpadmin}
   sudo usermod -aG sudo ${yiimpadmin}
@@ -171,7 +171,7 @@ case $response in
 
 0)
 #clear
-echo -e " Adding new user and password...$COL_RESET"
+echo -e "$CYAN Adding new user and password...$COL_RESET"
 
 sudo adduser ${yiimpadmin} --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 echo -e ""${RootPassword}"\n"${RootPassword}"" | passwd ${yiimpadmin}

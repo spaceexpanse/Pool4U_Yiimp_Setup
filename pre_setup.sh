@@ -6,7 +6,7 @@
 
 source /etc/functions.sh
 #clear
-echo -e " Setting our global variables..."
+echo -e "$CYAN Setting our global variables..."
 
 # If the machine is behind a NAT, inside a VM, etc., it may not know
 # its IP address on the public network / the Internet. Ask the Internet
