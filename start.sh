@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-sudo apt install git -y
-sudo apt install landscape-common -y
-sudo apt install nano -y
-sudo apt install dialog -y
-sudo apt update -y
-sudo apt upgrade -y
+ESC_SEQ="\x1b["
+COL_RESET=$ESC_SEQ"39;49;00m"
+RED=$ESC_SEQ"31;01m"
+GREEN=$ESC_SEQ"32;01m"
+YELLOW=$ESC_SEQ"33;01m"
+BLUE=$ESC_SEQ"34;01m"
+MAGENTA=$ESC_SEQ"35;01m"
+CYAN=$ESC_SEQ"36;01m"
+
+echo -e "$CYAN Installing needed packages for setup to continue...$COL_RESET"
+    source install_packages.sh
+echo -e "$GREEN Done...$COL_RESET"
 
 ################################################################################
 # Source https://mailinabox.email/ https://github.com/mail-in-a-box/mailinabox #
@@ -28,10 +34,6 @@ if [[ ("$FIRST_TIME_SETUP" == "1") ]]; then
     #clear
     cd $HOME/yiimpserver/install
     source functions.sh
-
-    echo -e "$CYAN Installing needed packages for setup to continue...$COL_RESET"
-    source install_packages.sh
-    echo -e "$GREEN Done...$COL_RESET"
 
     # copy functions to /etc
     sudo cp -r functions.sh /etc/
