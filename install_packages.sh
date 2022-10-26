@@ -7,12 +7,11 @@ BLUE=$ESC_SEQ"34;01m"
 MAGENTA=$ESC_SEQ"35;01m"
 CYAN=$ESC_SEQ"36;01m"
 
-echo -e "$CYAN Removing Apache and installing NGINX...$COL_RESET"
+echo -e "$CYAN Removing Apache...$COL_RESET"
     sudo apt-get purge apache2 -y
     sudo apt-get purge apache2-* -y
     sudo apt-get --purge autoremove -y
-    sudo apt-get install nginx -y
-echo -e "$GREEN Done. Removing Apache and installing NGINX...$COL_RESET"
+echo -e "$GREEN Done. Removing Apache...$COL_RESET"
 
 echo -e "$CYAN Installing MariaDB Repository...$COL_RESET"
     sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
@@ -189,8 +188,14 @@ echo -e "$CYAN Installing php*...$COL_RESET"
     #sudo apt-get install phpmyadmin -y
 echo -e "$GREEN Done. Installing php*...$COL_RESET"
 
+echo -e "$CYAN Installing NGINX...$COL_RESET"
+    sudo apt-get purge apache2 -y
+    sudo apt-get purge apache2-* -y
+    sudo apt-get install nginx -y
+echo -e "$GREEN Done. Installing NGINX...$COL_RESET"
+
+
 echo -e "$CYAN Installing updates/upgades for packages...$COL_RESET"
-    sudo apt-get purge apache2 apache2-* -y
     sudo apt update -y
     sudo apt upgrade -y
 echo -e "$GREEN Done. Installing updates/upgades for packages...$COL_RESET"
